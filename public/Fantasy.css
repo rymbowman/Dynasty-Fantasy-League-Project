@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.league-img img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: auto;
+}
+
+.sidebar.active .league-img img {
+   border-radius: 50%;
+   margin-left: 80px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background-color: #071023;
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;   
+}
+
+.sidebar.active ~ .main-content{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.sidebar.active {
+    width: 250px;
+    background-color: #071023;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: lightblue;
+    cursor: pointer;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.4rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar .top .logo {
+    color: lightblue;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo {
+    opacity: 1;
+    font-size: larger;
+    margin-left: 1 rem;
+    font-family: "Baskervville SC", serif;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    margin: .8rem auto;
+    width: 90%;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: .8rem;
+    line-height: 1.8rem;
+    font-family: "Baskervville SC", serif;
+}
+
+.sidebar ul li a:hover {
+    background-color: powderblue;
+    color: red;
+}
+
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    color: lightblue;
+    font-size: 25px;
+}
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+
+.sidebar.active .nav-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 75px;
+    top: 5px;
+    transform: (-50%, -50%);
+    box-shadow: 0 0.5rem .8rem navy;
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.main-content h1 {
+    font-family: "Baskervville SC", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #071023;
+    letter-spacing: 7.5px;
+    font-size: 70px;
+    text-align: center;
+    border-bottom: 5px solid red;
+    width: 80%;
+    margin: auto;
+    padding: 0px;
+}
+
+.members-leading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: #222;
+    height: 250px;
+    color: white;
+}
+
+.members-h1 {
+    padding: 5px;
+    border-bottom: 1px solid lightblue;
+}
+
+.members-p {
+    padding-top: 5px;
+    font-style: italic;
+}
+
+.members-h2 {
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #071023;
+}
+
+.league-members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #071023;
+}
+
+.member-img {
+    width: 300px;
+    height: 350px;
+    margin: 10px auto;
+    border: 2px solid #071023;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 22px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+.button-members {
+    padding: 2px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #071023;
+    width: 75px;
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: lightblue;
+    color: #071023;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+
+.button-members:hover {
+    filter: brightness(110%);
+}
+
+.sidebar.active ~ .members-page {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.main-content {
+    position: relative;
+    background-color: whitesmoke;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all .5s ease;
+    width: calc(100% - 80px);
+}
+
+.member-modal {
+    display: none;
+    z-index: 1;
+    left: auto;
+    top: 5%;
+    overflow: auto;
+    position: fixed;
+    width: 75%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, .9);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.modal-content {
+    height: 90%;
+    width: 80%;
+    display: block;
+    overflow: auto;
+}
+
+.modal-content-header {
+    font-size: 36px;
+}
+
+.modal-content-text {
+    font-size: 20px;
+}
+
+.modal-close-button {
+    padding: 2px 10px;
+    border: 1px solid navy;
+    border-radius: 5px;
+    width: 75px;
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    background-color: lightskyblue;
+    color: navy;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
+
+.modal-close-button:hover {
+    filter: brightness(110%);
+}
+
+.standings-rankings-titles {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    text-decoration: underline;
+    padding-top: 15px;
+}
+
+#standings-title {
+    width: 30%;
+    text-align: center;
+    margin-left: 8.75%
+}
+
+#pr-title {
+    width: 30%;
+    text-align: center;
+    margin-left: 22.5%;
+}
+
+.rankings-standings-container {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    height: 70vh;
+}
+
+#standings-container {
+    width: 47.5%;
+    background-color: navy;
+    margin-top: 7.5px;
+}
+
+.standings-row {
+    height: 10%;
+    border: 1px solid navy;
+    background-color: powderblue;
+}
+
+#power-rankings-container {
+    width: 47.5%;
+    margin-top: 7.5px;
+    margin-left: 5%;
+  }
+
+/* Style the buttons that are used to open and close the accordion panel */
+.pr-accordion {
+    background-color: powderblue;
+    color: powderblue;
+    cursor: pointer;
+    height: 10%;
+    width: 100%;
+    text-align: left;
+    border: 1px solid navy;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .pr-accordion:hover {
+    background-color: powderblue;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    background-color: whitesmoke;
+    display: none;
+    overflow: hidden;
+  }
+
+  .panel.active {
+    background-color: whitesmoke;
+    display: block;
+    overflow: hidden;
+  }
+
+  .punishments-container-a {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 75%;
+    margin: auto;
+    overflow: hidden;
+    padding: 15px 5px;
+  }
+
+  .punishments-container-b {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    width: 75%;
+    margin: auto;
+    overflow: hidden;
+    padding: 15px 5px;
+  }
+
+  .punishment-slideshow-a {
+    width: 30%;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .punishment-slideshow-b {
+    width: 30%;
+    float: right;
+    margin-left: 15px;
+  }
+
+  .punishment-img-1 {
+   width: 90%;
+   height: 90%;
+  }
+
+  .punishment-img-2 {
+    width: 90%;
+    height: 90%;
+  }
+
+
+
+
+
+

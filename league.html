@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./public/Fantasy.css">
+</head>
+<body>
+      <div class="sidebar">
+        <div class="top">
+          <div class="logo">
+            <h3>Flames Fantasy</h3>
+          </div>
+          <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <div class="league-img">
+          <img src="./Images/Liberty_Flames_logo.svg copy.png" alt="A logo of Liberty University" class="league-img">
+        </div>
+        <ul>
+          <li>
+            <a href="./homepage.html">
+              <i class='bx bxs-home-alt-2' ></i>
+              <span class="nav-item">Home Page</span>
+            </a>
+            <span class="tooltip">League</span>
+          </li>
+          <li>
+            <a href="./league.html">
+              <i class='bx bxs-grid'></i>
+              <span class="nav-item">League Info</span>
+            </a>
+            <span class="tooltip">League</span>
+          </li>
+          <li>
+            <a href="./members.html">
+              <i class='bx bxs-user'></i>
+              <span class="nav-item">Members</span>
+            </a>
+            <span class="tooltip">Members</span>
+          </li>
+          <li>
+            <a href="./history.html">
+              <i class='bx bxs-book'></i>
+              <span class="nav-item">History</span>
+            </a>
+            <span class="tooltip">History</span>
+          </li>
+          <li>
+            <a href="./resources.html">
+              <i class='bx bxs-ball'></i>
+              <span class="nav-item">Resources</span>
+            </a>
+            <span class="tooltip">Resources</span>
+          </li>
+        </ul>
+      </div>
+    <div class="main-content">
+      <div class="standings-rankings-titles">
+        <h3 id="standings-title">Standings</h3>
+        <h3 id="pr-title">Power Rankings</h3>
+      </div>
+      <div class="rankings-standings-container">
+        <div class="league-content" id="standings-container">
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+          <div class="standings-row">
+            <p class="standings-content"></p>
+          </div>
+        </div>
+  
+        <div class="league-content" id="power-rankings-container">
+          <button class="pr-accordion">1. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+          
+          <button class="pr-accordion">2. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+  
+          <button class="pr-accordion">3. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+  
+          <button class="pr-accordion">4. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+  
+          <button class="pr-accordion">5. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+  
+          <button class="pr-accordion">6. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+  
+          <button class="pr-accordion">7. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+  
+          <button class="pr-accordion">8. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+  
+          <button class="pr-accordion">9. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+  
+          <button class="pr-accordion">10. </button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="league-content" id="recent-transactions">
+
+      </div>
+      <div class="league-content" id="trade-block">
+
+      </div>
+    </div>
+    <script src="./Fantasty.js"></script>
+    <script>
+      /*document.querySelector(".pr-accordion").addEventListener("click", () => {
+        document.querySelector(".panel").classList.toggle("active");
+});*/
+var acc = document.getElementsByClassName("pr-accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+    </script>
+</body>
+</html>
