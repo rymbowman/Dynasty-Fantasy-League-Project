@@ -49,6 +49,10 @@
     transform: translateX(-50%);
 }
 
+.sidebar #btn:hover{
+    filter: brightness(175%);
+}
+
 .sidebar.active #btn {
     left: 90%;
 }
@@ -79,7 +83,7 @@
 }
 
 .sidebar ul li a {
-    color: white;
+    color: lightblue;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -89,8 +93,7 @@
 }
 
 .sidebar ul li a:hover {
-    background-color: powderblue;
-    color: red;
+    filter: brightness(175%);
 }
 
 .sidebar ul li a i {
