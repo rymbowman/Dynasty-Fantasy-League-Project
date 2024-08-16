@@ -16,8 +16,18 @@ btn.onclick = function() {
 
 
 //below are the functions to activate and deactivate the modals on my members page
+const verseText = document.querySelector('#verse-of-day')
+const verseReference = document.querySelector('#verse-reference')
+const options = {method: 'GET', headers: {accept: 'application/json'}};
 
-
-
-
+fetch('https://beta.ourmanna.com/api/v1/get?format=json&order=daily', options)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    let verse = data.verse.details.text;
+    verseText.innerHTML = `Verse of the day: ${verse}`
+    let reference = data.verse.details.reference
+    verseReference.innerHTML = reference
+  })
+  .catch(err => console.error(err));
 
