@@ -8,14 +8,13 @@
 .league-img img{
     height: 60px;
     width: 60px;
-    border-radius: 50%;
-    border: 1px solid #d9e2f7;
-    margin: auto;
+    margin-left: 10px;
+    transition: .5s ease;
 }
 
 .sidebar.active .league-img img {
-   border-radius: 50%;
    margin-left: 80px;
+   transition: .5s ease;
 }
 
 .sidebar {
@@ -25,7 +24,6 @@
     width: 80px;
     height: 100%;
     background-color: #071023;
-    padding: .4rem .8rem;
     transition: all 0.5s ease;  
     z-index: 1; 
 }
@@ -44,7 +42,7 @@
     position: absolute;
     color: #d9e2f7;
     cursor: pointer;
-    top: .4rem;
+    top: .2rem;
     left: 50%;
     font-size: 1.4rem;
     line-height: 50px;
@@ -68,6 +66,8 @@
     pointer-events: none;
     opacity: 0;
     white-space: nowrap;
+    transition: .5s ease;
+    margin-left: 15px;
 }
 
 .sidebar.active .top .logo {
@@ -75,6 +75,7 @@
     font-size: larger;
     margin-left: 1 rem;
     font-family: "Baskervville SC", serif;
+    transition: .5s ease;
 }
 
 .sidebar ul li {
@@ -105,15 +106,18 @@
     line-height: 50px;
     color: #d9e2f7;
     font-size: 25px;
+    margin-left: 12.5px;
 }
 
 .nav-item {
     white-space: nowrap;
     opacity: 0;
+    transition: .5s ease;
 }
 
 .sidebar.active .nav-item {
     opacity: 1;
+    transition: .5s ease;
 }
 
 .sidebar ul li .tooltip {
