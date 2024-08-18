@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
-
+    
     <body>
       <div class="sidebar">
         <div class="top">
@@ -62,17 +62,77 @@
   <div class="homepage">
     <div class="homepage-header">
       <h1 id="homepage-title">Flames Fantasy</h1>
-      <br>
-
       <h4 id="verse-of-day"></h4>
       <h6 id="verse-reference"></h6>
     </div>
-    
-      
+    <div class="homepage-main-content">
+          <h3 class="homepage-titles">Top Headlines</h3>
+          <div class="slideshow-carousel">
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1719937050814-72892488f741?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Headline Image 1" class="headlines-image" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1723894960978-3f1e1cead774?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Headline Image 2" class="headlines-image" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1723925089116-52652d744fc2?q=80&w=1489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Headline Image 3" class="headlines-image" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1723925089116-52652d744fc2?q=80&w=1489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Headline Image 3" class="headlines-image" style="width:100%">
+              <div class="text">Caption Four</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1723925089116-52652d744fc2?q=80&w=1489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Headline Image 3" class="headlines-image" style="width:100%">
+              <div class="text">Caption Five</div>
+            </div>
+            <button class="carousel-btn" id="prev-btn" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="carousel-btn" id="next-btn" onclick="plusSlides(1)">&#10095;</button>
+          </div>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+          </div>
     </div>
   </div>
   
   <script src="./Fantasty.js"></script>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+
+  </script>
 </body>
 
 </html>

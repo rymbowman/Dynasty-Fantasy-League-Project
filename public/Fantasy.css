@@ -147,6 +147,13 @@
 }
 
 /* This is all the styling for the homepage*/
+.homepage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    align-items: center;
+}
+
 .main-content h1 {
     font-family: "Baskervville SC", serif;
     font-weight: 500;
@@ -157,7 +164,6 @@
     text-align: center;
     border-bottom: 5px solid red;
     width: 80%;
-    margin: auto;
     padding: 0px;
 }
 
@@ -181,35 +187,122 @@
     font-size: 70px;
     text-align: center;
     padding-top: 175px;
-    position: relative;
-    width: calc(60% - 80px);
+    width: 60%;
     border-bottom: 5px solid red;
-    margin-left: 80px;
 }
 
 #verse-of-day {
-    width: calc(60% - 80px);
+    width: 60%;
     color: #d9e2f7;
-    margin-left: 80px;
     margin-top: 75px;
     text-align: center;
     font-size: 28px;
     font-family: "Baskervville SC", serif;
     font-weight: bold;
-    position: relative;
 }
 
 #verse-reference {
-    width: calc(60% - 80px);
+    width: 60%;
     color: #d9e2f7;
-    margin-left: 80px;
     margin-top: 10px;
     text-align: center;
     font-size: 20px;
     font-family: "Baskervville SC", serif;
     font-weight: bold;
-    position: relative;
 }
+
+.homepage-main-content {
+    width: 80%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+.homepage-titles {
+    margin: 25px auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Baskervville SC", serif;
+    font-weight: bold;
+    color: #071023;
+    border-bottom: 2px solid #222;
+    width: 60%;
+}
+
+.slideshow-carousel {
+    max-width: 1000px;
+    position: relative;
+    margin: 25px auto
+}
+
+.slide {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.carousel-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -22px;
+    padding: 8px;
+    color: white;
+    background: none;
+    font-weight: bold;
+    font-size: 26px;
+    transition: 0.6s ease;
+  }
+  
+  /* Position the "next button" to the right */
+  #prev-btn {
+    left: 0;
+    border: none;
+  }
+
+  #next-btn {
+    right: 0;
+    border: none;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .carousel-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 26px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .dot:hover {
+    background-color: #717171;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+/*Members Page*/
 .members-leading-container {
     display: flex;
     flex-direction: column;
