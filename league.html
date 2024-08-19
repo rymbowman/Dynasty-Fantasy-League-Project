@@ -10,54 +10,76 @@
     <link rel="stylesheet" href="./public/Fantasy.css">
 </head>
 <body>
-      <div class="sidebar">
-        <div class="top">
-          <div class="logo">
-            <h3>Flames Fantasy</h3>
-          </div>
-          <i class='bx bx-menu' id="btn"></i>
-        </div>
-        <div class="league-img">
-          <img src="./Images/Liberty_Flames_logo.svg copy.png" alt="A logo of Liberty University" class="league-img">
-        </div>
-        <ul>
-          <li>
-            <a href="./index.html">
-              <i class='bx bxs-home-alt-2' ></i>
-              <span class="nav-item">Home Page</span>
-            </a>
-            <span class="tooltip">League</span>
-          </li>
-          <li>
-            <a href="./league.html">
-              <i class='bx bxs-grid'></i>
-              <span class="nav-item">League Info</span>
-            </a>
-            <span class="tooltip">League</span>
-          </li>
-          <li>
-            <a href="./members.html">
-              <i class='bx bxs-user'></i>
-              <span class="nav-item">Members</span>
-            </a>
-            <span class="tooltip">Members</span>
-          </li>
-          <li>
-            <a href="./history.html">
-              <i class='bx bxs-book'></i>
-              <span class="nav-item">History</span>
-            </a>
-            <span class="tooltip">History</span>
-          </li>
-          <li>
-            <a href="./resources.html">
-              <i class='bx bxs-ball'></i>
-              <span class="nav-item">Resources</span>
-            </a>
-            <span class="tooltip">Resources</span>
-          </li>
-        </ul>
+  <div class="sidebar">
+    <div class="top">
+      <div class="logo">
+        <h3>Flames Fantasy</h3>
       </div>
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <div class="league-img">
+      <img src="./Images/Liberty_Flames_logo.svg copy.png" alt="A logo of Liberty University" class="league-img">
+    </div>
+    <ul>
+      <li>
+        <a href="./index.html">
+          <i class='bx bxs-home-alt-2'></i>
+          <span class="nav-item">Home Page</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="./league.html" id="league-info-sidebar">
+          <i class='bx bxs-grid'></i>
+          <span class="nav-item">League Info</span>
+          <span><i class='bx bx-chevron-down dropdown-arrow' id="league-dropdown-arrow"></i></span>
+        </a>
+        
+        <ul class="dropdown" id="league-dropdown">
+          <li class="sidebar-dropdown-item"><a href="#">Standings/Rankings</a></li>
+          <li class="sidebar-dropdown-item"><a href="#">Schedules</a></li>
+          <li class="sidebar-dropdown-item"><a href="#">Transactions</a></li>
+          <li class="sidebar-dropdown-item"><a href="#">League Leaders</a></li>
+        </ul>
+        <span class="tooltip">League</span>
+      </li>
+      <li>
+        <a href="./members.html">
+          <i class='bx bxs-user'></i>
+          <span class="nav-item">Members</span>
+        </a>
+        <span class="tooltip">Members</span>
+      </li>
+      <li>
+        <a href="./history.html">
+          <i class='bx bxs-book'></i>
+          <span class="nav-item">History</span>
+          <span><i class='bx bx-chevron-down dropdown-arrow' id="history-dropdown-arrow"></i></span>
+        </a>
+        <ul class="dropdown" id="history-dropdown">
+          <li class="sidebar-dropdown-item"><a href="#">Past Champions</a></li>
+          <li class="sidebar-dropdown-item"><a href="#">League Punishments</a></li>
+          <li class="sidebar-dropdown-item"><a href="#">Records</a></li>
+          <li class="sidebar-dropdown-item"><a href="#">Draft Classes</a></li>
+        </ul>
+        <span class="tooltip">History</span>
+      </li>
+      <li>
+        <a href="./resources.html">
+          <i class='bx bxs-ball'></i>
+          <span class="nav-item">Resources</span>
+          <span><i class='bx bx-chevron-down dropdown-arrow' id="resources-dropdown-arrow"></i></span>
+        </a>
+        <ul class="dropdown" id="resources-dropdown">
+          <li class="sidebar-dropdown-item"><a href="#">Trade Calculator</a></li>
+          <li class="sidebar-dropdown-item"><a href="#">Dynasty Rankings</a></li>
+          <li class="sidebar-dropdown-item"><a href="#">NFL News/Updates</a></li>
+          <li class="sidebar-dropdown-item"><a href="#">Dynasty Podcasts</a></li>
+        </ul>
+        <span class="tooltip">Resources</span>
+      </li>
+    </ul>
+  </div>
     <div class="main-content">
       <div class="standings-rankings-titles">
         <h3 id="standings-title">Standings</h3>
