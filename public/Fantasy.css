@@ -142,6 +142,7 @@
     font-family: "Baskervville SC", serif;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1px 3px;
+    border-radius: 5px;
 }
 
 .sidebar.active ul li .tooltip {
