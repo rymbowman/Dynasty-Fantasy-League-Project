@@ -6,6 +6,14 @@ btn.onclick = function() {
     sideBar.classList.toggle('active');
 }
 
+let dropdownBtn = document.querySelector('.dropdown-arrow');
+let leagueDropdown = document.querySelector('#league-dropdown');
+
+dropdownBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    leagueDropdown.classList.toggle('active');
+    dropdownBtn.classList.toggle('rotate');
+})
 /*let accordionButton = document.querySelector('.pr-accordion');
 let accordionPanel = document.querySelector('.panel');
 

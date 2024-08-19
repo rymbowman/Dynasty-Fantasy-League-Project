@@ -146,6 +146,49 @@
     display: none;
 }
 
+#league-dropdown {
+    display: none;
+    flex-direction: column;
+    min-width: 50px;
+    text-align: center;
+    color: #d9e2f7;
+    margin-left: 30px;
+    list-style: none;
+    white-space: nowrap;
+    transition: all 1s ease;
+}
+
+.sidebar.active #league-dropdown.active {
+    display: flex;
+    background-color: #071023;
+}
+
+.sidebar-dropdown-item {
+    margin: auto;
+}
+
+.sidebar ul li .dropdown-arrow {
+    opacity: 0;
+    font-size: 25px;
+    color: #d9e2f7;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    rotate: 270deg;
+}
+
+.sidebar.active ul li .dropdown-arrow {
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.sidebar.active ul li .dropdown-arrow.rotate {
+    transform: rotate(90deg);
+}
+
+#league-info-sidebar {
+    display: flex;
+    align-items: center;
+}
 /* This is all the styling for the homepage*/
 .homepage {
     display: flex;
@@ -213,7 +256,6 @@
 
 .homepage-main-content {
     width: 80%;
-    border: 1px solid blue;
     box-sizing: border-box;
 }
 
