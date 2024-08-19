@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./public/Fantasy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="top">
+          <div class="logo">
+            <h3>Flames Fantasy</h3>
+          </div>
+          <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <div class="league-img">
+          <img src="./Images/Liberty_Flames_logo.svg copy.png" alt="A logo of Liberty University" class="league-img">
+        </div>
+        <ul>
+          <li>
+            <a href="./index.html">
+              <i class='bx bxs-home-alt-2'></i>
+              <span class="nav-item">Home Page</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li>
+            <a href="./league.html" id="league-info-sidebar">
+              <i class='bx bxs-grid'></i>
+              <span class="nav-item">League Info</span>
+              <span><i class='bx bx-chevron-down dropdown-arrow' id="league-dropdown-arrow"></i></span>
+            </a>
+            
+            <ul class="dropdown" id="league-dropdown">
+              <li class="sidebar-dropdown-item"><a href="#">Standings/Rankings</a></li>
+              <li class="sidebar-dropdown-item"><a href="#">Schedules</a></li>
+              <li class="sidebar-dropdown-item"><a href="#">Transactions</a></li>
+              <li class="sidebar-dropdown-item"><a href="#">League Leaders</a></li>
+            </ul>
+            <span class="tooltip">League</span>
+          </li>
+          <li>
+            <a href="./members.html">
+              <i class='bx bxs-user'></i>
+              <span class="nav-item">Members</span>
+            </a>
+            <span class="tooltip">Members</span>
+          </li>
+          <li>
+            <a href="./history.html">
+              <i class='bx bxs-book'></i>
+              <span class="nav-item">History</span>
+              <span><i class='bx bx-chevron-down dropdown-arrow' id="history-dropdown-arrow"></i></span>
+            </a>
+            <ul class="dropdown" id="history-dropdown">
+              <li class="sidebar-dropdown-item"><a href="#">Past Champions</a></li>
+              <li class="sidebar-dropdown-item"><a href="#">League Punishments</a></li>
+              <li class="sidebar-dropdown-item"><a href="#">Records</a></li>
+              <li class="sidebar-dropdown-item"><a href="#">Draft Classes</a></li>
+            </ul>
+            <span class="tooltip">History</span>
+          </li>
+          <li>
+            <a href="./resources.html">
+              <i class='bx bxs-ball'></i>
+              <span class="nav-item">Resources</span>
+              <span><i class='bx bx-chevron-down dropdown-arrow' id="resources-dropdown-arrow"></i></span>
+            </a>
+            <ul class="dropdown" id="resources-dropdown">
+              <li class="sidebar-dropdown-item"><a href="#">Trade Calculator</a></li>
+              <li class="sidebar-dropdown-item"><a href="#">Dynasty Rankings</a></li>
+              <li class="sidebar-dropdown-item"><a href="#">NFL News/Updates</a></li>
+              <li class="sidebar-dropdown-item"><a href="#">Dynasty Podcasts</a></li>
+            </ul>
+            <span class="tooltip">Resources</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <div class="standings-rankings-titles">
+          <h3 id="standings-title">Standings</h3>
+          <h3 id="pr-title">Power Rankings</h3>
+        </div>
+        <div class="rankings-standings-container">
+          <div class="league-content" id="standings-container">
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+            <div class="standings-row">
+              <p class="standings-content"></p>
+            </div>
+          </div>
+    
+          <div class="league-content" id="power-rankings-container">
+            <button class="pr-accordion">1. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+            
+            <button class="pr-accordion">2. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+    
+            <button class="pr-accordion">3. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+    
+            <button class="pr-accordion">4. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+    
+            <button class="pr-accordion">5. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+    
+            <button class="pr-accordion">6. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+    
+            <button class="pr-accordion">7. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+    
+            <button class="pr-accordion">8. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+    
+            <button class="pr-accordion">9. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+    
+            <button class="pr-accordion">10. </button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+          </div>
+        </div>
+    <script src="./Fantasty.js"></script>
+</body>
+</html>

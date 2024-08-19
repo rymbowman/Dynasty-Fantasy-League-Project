@@ -134,12 +134,14 @@
     opacity: 1;
     padding: 0px 5px;
     border-bottom: 2px solid red;
-    color: #d9e2f7;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 5px;
     font-family: "Baskervville SC", serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px 3px;
 }
 
 .sidebar.active ul li .tooltip {
@@ -220,8 +222,7 @@
 .main-content h1 {
     font-family: "Baskervville SC", serif;
     font-weight: 500;
-    font-style: normal;
-    color: #071023;
+    color: #d9e2f7;
     letter-spacing: 7.5px;
     font-size: 70px;
     text-align: center;
@@ -365,6 +366,25 @@
     to {opacity: 1}
   }
 
+/* League Splash Page*/
+.directory-pages {
+    display: flex;
+    margin-left: 80px;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+#standings-rankings-card {
+    background-image: url(/Images/standings-background-img.png);
+}
+
+#standings-rankings-card:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, .2)), url(/Images/standings-background-img.png);
+}
 /*Members Page*/
 .members-leading-container {
     display: flex;
@@ -417,6 +437,7 @@
     margin: 10px auto;
     border: 2px solid #071023;
     border-radius: 10px;
+    
 }
 
 .card-title {
@@ -511,16 +532,6 @@
 }
 
 /*Styling for History Page*/
-#history-home-page {
-    display: flex;
-    margin-left: 80px;
-    gap: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: whitesmoke;
-}
 
 .card-pathways {
     display: flex;
@@ -530,8 +541,8 @@
     text-decoration: none;
     color: #d9e2f7;
     flex-wrap: wrap;
-    width: 250px;
-    height: 300px;
+    width: 300px;
+    height: 350px;
     background-image: url(https://images.unsplash.com/photo-1723771106486-eb5fceb082a9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -541,6 +552,9 @@
     font-family: "Baskervville SC", serif;
     font-size: 26px;
     letter-spacing: 1.5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .card-pathways:hover {
