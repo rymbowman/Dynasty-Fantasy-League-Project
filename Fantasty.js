@@ -6,13 +6,31 @@ btn.onclick = function() {
     sideBar.classList.toggle('active');
 }
 
-let dropdownBtn = document.querySelector('.dropdown-arrow');
-let leagueDropdown = document.querySelector('#league-dropdown');
+const leagueDropdownBtn = document.querySelector('#league-dropdown-arrow');
+const leagueDropdown = document.querySelector('#league-dropdown');
 
-dropdownBtn.addEventListener('click', (event) => {
+leagueDropdownBtn.addEventListener('click', (event) => {
     event.preventDefault();
     leagueDropdown.classList.toggle('active');
-    dropdownBtn.classList.toggle('rotate');
+    leagueDropdownBtn.classList.toggle('rotate');
+})
+
+const historyDropdownBtn = document.querySelector('#history-dropdown-arrow');
+const historyDropdown = document.querySelector('#history-dropdown');
+
+historyDropdownBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    historyDropdown.classList.toggle('active');
+    historyDropdownBtn.classList.toggle('rotate');
+})
+
+const resourcesDropdownBtn = document.querySelector('#resources-dropdown-arrow');
+const resourcesDropdown = document.querySelector('#resources-dropdown');
+
+resourcesDropdownBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    resourcesDropdown.classList.toggle('active');
+    resourcesDropdownBtn.classList.toggle('rotate');
 })
 /*let accordionButton = document.querySelector('.pr-accordion');
 let accordionPanel = document.querySelector('.panel');

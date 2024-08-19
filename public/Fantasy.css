@@ -146,7 +146,7 @@
     display: none;
 }
 
-#league-dropdown {
+.dropdown {
     display: none;
     flex-direction: column;
     min-width: 50px;
@@ -159,6 +159,16 @@
 }
 
 .sidebar.active #league-dropdown.active {
+    display: flex;
+    background-color: #071023;
+}
+
+.sidebar.active #history-dropdown.active {
+    display: flex;
+    background-color: #071023;
+}
+
+.sidebar.active #resources-dropdown.active {
     display: flex;
     background-color: #071023;
 }
@@ -181,7 +191,15 @@
     transition: .5s ease;
 }
 
-.sidebar.active ul li .dropdown-arrow.rotate {
+.sidebar.active ul li #league-dropdown-arrow.rotate {
+    transform: rotate(90deg);
+}
+
+.sidebar.active ul li #history-dropdown-arrow.rotate {
+    transform: rotate(90deg);
+}
+
+.sidebar.active ul li #resources-dropdown-arrow.rotate {
     transform: rotate(90deg);
 }
 
@@ -189,6 +207,8 @@
     display: flex;
     align-items: center;
 }
+
+
 /* This is all the styling for the homepage*/
 .homepage {
     display: flex;
